@@ -11,9 +11,12 @@ public class EquationSolver {
         String equationorder;
         double a;
         double x;
+        double x1;
+        double x2;
         double b;
         double c;
         double amount = 0;
+        equationorder = JOptionPane.showInputDialog("equationorder?");
         a = Double.parseDouble(JOptionPane.showInputDialog("a?"));
         b = Double.parseDouble(JOptionPane.showInputDialog("b?"));
         equationorder = "ax^2 + b + c = 0";
@@ -24,7 +27,13 @@ public class EquationSolver {
             JOptionPane.showMessageDialog(null, x);
         } else if (equationorder == "ax^2 + b + c = 0") {
             c = Double.parseDouble(JOptionPane.showInputDialog("c?"));
-
+            x1 = -b/-2 - java.lang.Math.sqrt(b*b/2*2 - c);
+            x2 = -b/-2 + java.lang.Math.sqrt(b*b/2*2 - c);
+            if (x1 > 0) {
+                JOptionPane.showMessageDialog(null, "x1: " + x1 + "\nx2: " + x2);
+            } else if (x1 < 0) {
+                JOptionPane.showMessageDialog(null, "x: " + x1 + "i");
+            }
         } else
         {
             JOptionPane.showMessageDialog(null, "not ax + b");
