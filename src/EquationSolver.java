@@ -29,18 +29,16 @@ public class EquationSolver {
             c = Double.parseDouble(JOptionPane.showInputDialog("c?"));
             x1 = -b/-2 - java.lang.Math.sqrt(b*b/2*2 - c);
             x2 = -b/-2 + java.lang.Math.sqrt(b*b/2*2 - c);
-            if (x1 > 0) {
+            x = -b + java.lang.Math.sqrt(b*b -4*a*c / 2*a);
+            JOptionPane.showMessageDialog(null, "x: " + x + "\nx: " + -x);
+            /*if (x1 > 0) {
                 JOptionPane.showMessageDialog(null, "x1: " + x1 + "\nx2: " + x2);
             } else if (x1 < 0) {
                 JOptionPane.showMessageDialog(null, "x: " + x1 + "i");
-            }
+            }*/
         } else
         {
             JOptionPane.showMessageDialog(null, "not ax + b");
         }
-/*/        while(k <= n) {
-            amount = amount + k;
-            k = k + 1;
-        } /*/
     }
 }
